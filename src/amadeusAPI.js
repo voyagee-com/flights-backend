@@ -1,8 +1,10 @@
+require('dotenv').config()
+
 const Amadeus = require('amadeus');
 
 var amadeus = new Amadeus({
-  clientId: 'ngJkhM5s8yHOF1usK7UihvppRSYa2GHF',
-  clientSecret: 'pI7ayaaOnb2KWOvU'
+  clientId: process.env.AMADEUS_CLIENT_ID,
+  clientSecret:  process.env.AMADEUS_CLIENT_SECRET
 })
 
 module.exports = amadeus
